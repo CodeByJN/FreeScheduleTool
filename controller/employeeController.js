@@ -48,7 +48,7 @@ const createEmployee = (req, res) => {
   } = req.body;
 
   pool.query(
-    "INSERT INTO employee (employee_id,  first_name, last_name, phone_number,position, shift, hourly_wage, hours_worked,work_hour) VALUES ($1, $2,$3,$4,$5,$6,$7,$8,$9,$10) RETURNING *",
+    "INSERT INTO employee (employee_id,  first_name, last_name, phone_number,position, shift, hourly_wage, hours_worked,work_hour) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9) RETURNING *",
     [
       employee_id,
       first_name,

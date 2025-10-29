@@ -11,6 +11,9 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
+app.use(express.urlencoded({ extended: true })); //parse form data
+app.use(express.json()); //for JSON bodies
+
 //Render ejs files. No more HTML
 app.set("view engine", "ejs");
 
